@@ -1,26 +1,11 @@
-== README
+== NOAA SCAT Database Readme
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This application is a demonstration of an open-source Ruby-on-Rails application for storing and querying Shoreline Cleanup and Assessment Technique (SCAT) data collected during an oil spill.  Note that this database is compliant with NOAA's SCAT Data Standard.
 
 Things you may want to cover:
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
+* Ruby version 2.2.4
+* Rails 4.2.6
 * ...
 
 
