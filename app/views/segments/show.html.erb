@@ -1,0 +1,70 @@
+<div class="page-header">
+  <h3>Segment #<%= @segment.id %></h3>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <dl class="dl-horizontal">
+      <dt>Segment</dt>
+      <dd><%= @segment.segment_id %></dd>
+
+      <dt>Esi prim</dt>
+      <dd><%= @segment.esi_prim %></dd>
+
+      <dt>Esi sec</dt>
+      <dd><%= @segment.esi_sec %></dd>
+
+      <dt>Back cliff</dt>
+      <dd><%= @segment.back_cliff %></dd>
+
+      <dt>Back low</dt>
+      <dd><%= @segment.back_low %></dd>
+
+      <dt>Back beach</dt>
+      <dd><%= @segment.back_beach %></dd>
+
+      <dt>Back dune</dt>
+      <dd><%= @segment.back_dune %></dd>
+
+      <dt>Back wetl</dt>
+      <dd><%= @segment.back_wetl %></dd>
+
+      <dt>Back lag</dt>
+      <dd><%= @segment.back_lag %></dd>
+
+      <dt>Back delt</dt>
+      <dd><%= @segment.back_delt %></dd>
+
+      <dt>Back chan</dt>
+      <dd><%= @segment.back_chan %></dd>
+
+      <dt>Back man</dt>
+      <dd><%= @segment.back_man %></dd>
+
+      <dt>Acc along</dt>
+      <dd><%= @segment.acc_along %></dd>
+
+      <dt>Acc back</dt>
+      <dd><%= @segment.acc_back %></dd>
+
+      <dt>Stage back</dt>
+      <dd><%= @segment.stage_back %></dd>
+
+      <dt>Acc desc</dt>
+      <dd><%= @segment.acc_desc %></dd>
+
+    </dl>
+
+    <div class="btn-group btn-group-justified">
+      <a href="/segments" class="btn btn-primary">
+        Back
+      </a>
+      <a href="/segments/<%= @segment.id %>/edit" class="btn btn-warning">
+        Edit
+      </a>
+      <a href="/delete_segment/<%= @segment.id %>" class="btn btn-danger" rel="nofollow">
+        Delete
+      </a>
+    </div>
+  </div>
+</div>

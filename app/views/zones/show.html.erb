@@ -1,0 +1,91 @@
+<div class="page-header">
+  <h3>Zone #<%= @zone.id %></h3>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <dl class="dl-horizontal">
+      <dt>Zone</dt>
+      <dd><%= @zone.zone_id %></dd>
+
+      <dt>Zone name</dt>
+      <dd><%= @zone.zone_name %></dd>
+
+      <dt>Survey</dt>
+      <dd><%= @zone.survey_id %></dd>
+
+      <dt>Tidal zone</dt>
+      <dd><%= @zone.tidal_zone %></dd>
+
+      <dt>Width</dt>
+      <dd><%= @zone.width %></dd>
+
+      <dt>Oil dist</dt>
+      <dd><%= @zone.oil_dist %></dd>
+
+      <dt>Oil thick</dt>
+      <dd><%= @zone.oil_thick %></dd>
+
+      <dt>Oil char</dt>
+      <dd><%= @zone.oil_char %></dd>
+
+      <dt>Substr</dt>
+      <dd><%= @zone.substr %></dd>
+
+      <dt>Tb cnt</dt>
+      <dd><%= @zone.tb_cnt %></dd>
+
+      <dt>Tb area</dt>
+      <dd><%= @zone.tb_area %></dd>
+
+      <dt>Tb arunit</dt>
+      <dd><%= @zone.tb_arunit %></dd>
+
+      <dt>Tb mavsize</dt>
+      <dd><%= @zone.tb_mavsize %></dd>
+
+      <dt>Tb </dt>
+      <dd><%= @zone.tb_ %></dd>
+
+      <dt>Lgsize</dt>
+      <dd><%= @zone.lgsize %></dd>
+
+      <dt>Tb type</dt>
+      <dd><%= @zone.tb_type %></dd>
+
+      <dt>P canopy</dt>
+      <dd><%= @zone.p_canopy %></dd>
+
+      <dt>P oilbot</dt>
+      <dd><%= @zone.p_oilbot %></dd>
+
+      <dt>P oiltop</dt>
+      <dd><%= @zone.p_oiltop %></dd>
+
+      <dt>Esi</dt>
+      <dd><%= @zone.esi %></dd>
+
+      <dt>Oil cat</dt>
+      <dd><%= @zone.oil_cat %></dd>
+
+      <dt>Source</dt>
+      <dd><%= @zone.source %></dd>
+
+      <dt>Zone comm</dt>
+      <dd><%= @zone.zone_comm %></dd>
+
+    </dl>
+
+    <div class="btn-group btn-group-justified">
+      <a href="/zones" class="btn btn-primary">
+        Back
+      </a>
+      <a href="/zones/<%= @zone.id %>/edit" class="btn btn-warning">
+        Edit
+      </a>
+      <a href="/delete_zone/<%= @zone.id %>" class="btn btn-danger" rel="nofollow">
+        Delete
+      </a>
+    </div>
+  </div>
+</div>

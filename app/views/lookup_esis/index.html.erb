@@ -1,0 +1,30 @@
+<div class="page-header">
+  <h1>
+    Lookup esis
+    <a href="/lookup_esis/new" class="btn btn-lg btn-success">New Lookup esi</a>
+  </h1>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <table class="table table-striped table-hover">
+      <tr>
+        <th>Esi code</th>
+        <th>Description</th>
+        <th>Actions</th>
+      </tr>
+
+      <% @lookup_esis.each do |lookup_esi| %>
+      <tr>
+        <td><%= lookup_esi.esi_code %></td>
+        <td><%= lookup_esi.description %></td>
+        <td>
+          <a href="/lookup_esis/<%= lookup_esi.id %>" class="btn btn-primary">Show</a>
+          <a href="/lookup_esis/<%= lookup_esi.id %>/edit" class="btn btn-warning">Edit</a>
+          <a href="/delete_lookup_esi/<%= lookup_esi.id %>" class="btn btn-danger" rel="nofollow">Delete</a>
+        </td>
+      </tr>
+      <% end %>
+    </table>
+  </div>
+</div>

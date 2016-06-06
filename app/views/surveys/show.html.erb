@@ -1,0 +1,70 @@
+<div class="page-header">
+  <h3>Survey #<%= @survey.id %></h3>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <dl class="dl-horizontal">
+      <dt>Survey</dt>
+      <dd><%= @survey.survey_id %></dd>
+
+      <dt>Segment</dt>
+      <dd><%= @survey.segment_id %></dd>
+
+      <dt>Seg list</dt>
+      <dd><%= @survey.seg_list %></dd>
+
+      <dt>Surv date</dt>
+      <dd><%= @survey.surv_date %></dd>
+
+      <dt>Surv dint</dt>
+      <dd><%= @survey.surv_dint %></dd>
+
+      <dt>Start time</dt>
+      <dd><%= @survey.start_time %></dd>
+
+      <dt>Stop time</dt>
+      <dd><%= @survey.stop_time %></dd>
+
+      <dt>Tide hgt</dt>
+      <dd><%= @survey.tide_hgt %></dd>
+
+      <dt>Surv type</dt>
+      <dd><%= @survey.surv_type %></dd>
+
+      <dt>Surv per1</dt>
+      <dd><%= @survey.surv_per1 %></dd>
+
+      <dt>Surv per2</dt>
+      <dd><%= @survey.surv_per2 %></dd>
+
+      <dt>Surv per3</dt>
+      <dd><%= @survey.surv_per3 %></dd>
+
+      <dt>Surv per4</dt>
+      <dd><%= @survey.surv_per4 %></dd>
+
+      <dt>Surv per5</dt>
+      <dd><%= @survey.surv_per5 %></dd>
+
+      <dt>Surv per6</dt>
+      <dd><%= @survey.surv_per6 %></dd>
+
+      <dt>Surv comm</dt>
+      <dd><%= @survey.surv_comm %></dd>
+
+    </dl>
+
+    <div class="btn-group btn-group-justified">
+      <a href="/surveys" class="btn btn-primary">
+        Back
+      </a>
+      <a href="/surveys/<%= @survey.id %>/edit" class="btn btn-warning">
+        Edit
+      </a>
+      <a href="/delete_survey/<%= @survey.id %>" class="btn btn-danger" rel="nofollow">
+        Delete
+      </a>
+    </div>
+  </div>
+</div>

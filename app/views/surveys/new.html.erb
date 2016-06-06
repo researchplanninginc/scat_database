@@ -1,0 +1,172 @@
+<!-- Validation failure messages -->
+<% if @survey.errors.any? %>
+  <% @survey.errors.full_messages.each do |message| %>
+    <div class="alert alert-dismissable alert-danger">
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+      <%= message %>
+    </div>
+  <% end %>
+<% end %>
+
+<div class="page-header">
+  <h3>Add Survey</h3>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <form action="/create_survey" method="post">
+      <!-- Hidden input for authenticity token to protect from forgery -->
+      <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
+
+      <!-- Label and input for survey_id -->
+      <div class="form-group">
+        <label for="survey_id" class="control-label">
+          Survey
+        </label>
+
+        <input type="text" id="survey_id" name="survey_id" placeholder="Survey" class="form-control" value="<%= @survey.survey_id %>">
+      </div>
+
+      <!-- Label and input for segment_id -->
+      <div class="form-group">
+        <label for="segment_id" class="control-label">
+          Segment
+        </label>
+
+        <input type="text" id="segment_id" name="segment_id" placeholder="Segment" class="form-control" value="<%= @survey.segment_id %>">
+      </div>
+
+      <!-- Label and input for seg_list -->
+      <div class="form-group">
+        <label for="seg_list" class="control-label">
+          Seg list
+        </label>
+
+        <input type="text" id="seg_list" name="seg_list" placeholder="Seg list" class="form-control" value="<%= @survey.seg_list %>">
+      </div>
+
+      <!-- Label and input for surv_date -->
+      <div class="form-group">
+        <label for="surv_date" class="control-label">
+          Surv date
+        </label>
+
+        <input type="text" id="surv_date" name="surv_date" placeholder="Surv date" class="form-control" value="<%= @survey.surv_date %>">
+      </div>
+
+      <!-- Label and input for surv_dint -->
+      <div class="form-group">
+        <label for="surv_dint" class="control-label">
+          Surv dint
+        </label>
+
+        <input type="text" id="surv_dint" name="surv_dint" placeholder="Surv dint" class="form-control" value="<%= @survey.surv_dint %>">
+      </div>
+
+      <!-- Label and input for start_time -->
+      <div class="form-group">
+        <label for="start_time" class="control-label">
+          Start time
+        </label>
+
+        <input type="text" id="start_time" name="start_time" placeholder="Start time" class="form-control" value="<%= @survey.start_time %>">
+      </div>
+
+      <!-- Label and input for stop_time -->
+      <div class="form-group">
+        <label for="stop_time" class="control-label">
+          Stop time
+        </label>
+
+        <input type="text" id="stop_time" name="stop_time" placeholder="Stop time" class="form-control" value="<%= @survey.stop_time %>">
+      </div>
+
+      <!-- Label and input for tide_hgt -->
+      <div class="form-group">
+        <label for="tide_hgt" class="control-label">
+          Tide hgt
+        </label>
+
+        <input type="text" id="tide_hgt" name="tide_hgt" placeholder="Tide hgt" class="form-control" value="<%= @survey.tide_hgt %>">
+      </div>
+
+      <!-- Label and input for surv_type -->
+      <div class="form-group">
+        <label for="surv_type" class="control-label">
+          Surv type
+        </label>
+
+        <input type="text" id="surv_type" name="surv_type" placeholder="Surv type" class="form-control" value="<%= @survey.surv_type %>">
+      </div>
+
+      <!-- Label and input for surv_per1 -->
+      <div class="form-group">
+        <label for="surv_per1" class="control-label">
+          Surv per1
+        </label>
+
+        <input type="text" id="surv_per1" name="surv_per1" placeholder="Surv per1" class="form-control" value="<%= @survey.surv_per1 %>">
+      </div>
+
+      <!-- Label and input for surv_per2 -->
+      <div class="form-group">
+        <label for="surv_per2" class="control-label">
+          Surv per2
+        </label>
+
+        <input type="text" id="surv_per2" name="surv_per2" placeholder="Surv per2" class="form-control" value="<%= @survey.surv_per2 %>">
+      </div>
+
+      <!-- Label and input for surv_per3 -->
+      <div class="form-group">
+        <label for="surv_per3" class="control-label">
+          Surv per3
+        </label>
+
+        <input type="text" id="surv_per3" name="surv_per3" placeholder="Surv per3" class="form-control" value="<%= @survey.surv_per3 %>">
+      </div>
+
+      <!-- Label and input for surv_per4 -->
+      <div class="form-group">
+        <label for="surv_per4" class="control-label">
+          Surv per4
+        </label>
+
+        <input type="text" id="surv_per4" name="surv_per4" placeholder="Surv per4" class="form-control" value="<%= @survey.surv_per4 %>">
+      </div>
+
+      <!-- Label and input for surv_per5 -->
+      <div class="form-group">
+        <label for="surv_per5" class="control-label">
+          Surv per5
+        </label>
+
+        <input type="text" id="surv_per5" name="surv_per5" placeholder="Surv per5" class="form-control" value="<%= @survey.surv_per5 %>">
+      </div>
+
+      <!-- Label and input for surv_per6 -->
+      <div class="form-group">
+        <label for="surv_per6" class="control-label">
+          Surv per6
+        </label>
+
+        <input type="text" id="surv_per6" name="surv_per6" placeholder="Surv per6" class="form-control" value="<%= @survey.surv_per6 %>">
+      </div>
+
+      <!-- Label and input for surv_comm -->
+      <div class="form-group">
+        <label for="surv_comm" class="control-label">
+          Surv comm
+        </label>
+
+        <textarea id="surv_comm" name="surv_comm" placeholder="Surv comm" class="form-control" rows="3"><%= @survey.surv_comm %></textarea>
+      </div>
+
+      <button class="btn btn-success">
+        Create Survey
+      </button>
+      or
+      <a href="/surveys">Cancel</a>
+    </form>
+  </div>
+</div>

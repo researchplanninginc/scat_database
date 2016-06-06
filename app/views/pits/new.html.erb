@@ -1,0 +1,109 @@
+<!-- Validation failure messages -->
+<% if @pit.errors.any? %>
+  <% @pit.errors.full_messages.each do |message| %>
+    <div class="alert alert-dismissable alert-danger">
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+      <%= message %>
+    </div>
+  <% end %>
+<% end %>
+
+<div class="page-header">
+  <h3>Add Pit</h3>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <form action="/create_pit" method="post">
+      <!-- Hidden input for authenticity token to protect from forgery -->
+      <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
+
+      <!-- Label and input for pit_id -->
+      <div class="form-group">
+        <label for="pit_id" class="control-label">
+          Pit
+        </label>
+
+        <input type="text" id="pit_id" name="pit_id" placeholder="Pit" class="form-control" value="<%= @pit.pit_id %>">
+      </div>
+
+      <!-- Label and input for pit_name -->
+      <div class="form-group">
+        <label for="pit_name" class="control-label">
+          Pit name
+        </label>
+
+        <input type="text" id="pit_name" name="pit_name" placeholder="Pit name" class="form-control" value="<%= @pit.pit_name %>">
+      </div>
+
+      <!-- Label and input for survey_id -->
+      <div class="form-group">
+        <label for="survey_id" class="control-label">
+          Survey
+        </label>
+
+        <input type="text" id="survey_id" name="survey_id" placeholder="Survey" class="form-control" value="<%= @pit.survey_id %>">
+      </div>
+
+      <!-- Label and input for tidal_zone -->
+      <div class="form-group">
+        <label for="tidal_zone" class="control-label">
+          Tidal zone
+        </label>
+
+        <input type="text" id="tidal_zone" name="tidal_zone" placeholder="Tidal zone" class="form-control" value="<%= @pit.tidal_zone %>">
+      </div>
+
+      <!-- Label and input for p_depth -->
+      <div class="form-group">
+        <label for="p_depth" class="control-label">
+          P depth
+        </label>
+
+        <input type="text" id="p_depth" name="p_depth" placeholder="P depth" class="form-control" value="<%= @pit.p_depth %>">
+      </div>
+
+      <!-- Label and input for p_oil_char -->
+      <div class="form-group">
+        <label for="p_oil_char" class="control-label">
+          P oil char
+        </label>
+
+        <input type="text" id="p_oil_char" name="p_oil_char" placeholder="P oil char" class="form-control" value="<%= @pit.p_oil_char %>">
+      </div>
+
+      <!-- Label and input for p_oil_bot -->
+      <div class="form-group">
+        <label for="p_oil_bot" class="control-label">
+          P oil bot
+        </label>
+
+        <input type="text" id="p_oil_bot" name="p_oil_bot" placeholder="P oil bot" class="form-control" value="<%= @pit.p_oil_bot %>">
+      </div>
+
+      <!-- Label and input for p_oil_top -->
+      <div class="form-group">
+        <label for="p_oil_top" class="control-label">
+          P oil top
+        </label>
+
+        <input type="text" id="p_oil_top" name="p_oil_top" placeholder="P oil top" class="form-control" value="<%= @pit.p_oil_top %>">
+      </div>
+
+      <!-- Label and input for p_oil_dist -->
+      <div class="form-group">
+        <label for="p_oil_dist" class="control-label">
+          P oil dist
+        </label>
+
+        <input type="text" id="p_oil_dist" name="p_oil_dist" placeholder="P oil dist" class="form-control" value="<%= @pit.p_oil_dist %>">
+      </div>
+
+      <button class="btn btn-success">
+        Create Pit
+      </button>
+      or
+      <a href="/pits">Cancel</a>
+    </form>
+  </div>
+</div>

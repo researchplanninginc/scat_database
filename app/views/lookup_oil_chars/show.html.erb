@@ -1,0 +1,28 @@
+<div class="page-header">
+  <h3>Lookup Oil Char #<%= @lookup_oil_char.id %></h3>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <dl class="dl-horizontal">
+      <dt>Char code</dt>
+      <dd><%= @lookup_oil_char.char_code %></dd>
+
+      <dt>Description</dt>
+      <dd><%= @lookup_oil_char.description %></dd>
+
+    </dl>
+
+    <div class="btn-group btn-group-justified">
+      <a href="/lookup_oil_chars" class="btn btn-primary">
+        Back
+      </a>
+      <a href="/lookup_oil_chars/<%= @lookup_oil_char.id %>/edit" class="btn btn-warning">
+        Edit
+      </a>
+      <a href="/delete_lookup_oil_char/<%= @lookup_oil_char.id %>" class="btn btn-danger" rel="nofollow">
+        Delete
+      </a>
+    </div>
+  </div>
+</div>

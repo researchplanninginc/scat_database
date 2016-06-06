@@ -1,0 +1,58 @@
+<div class="page-header">
+  <h1>
+    Segments
+    <a href="/segments/new" class="btn btn-lg btn-success">New Segment</a>
+  </h1>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <table class="table table-striped table-hover">
+      <tr>
+        <th>Segment</th>
+        <th>Esi prim</th>
+        <th>Esi sec</th>
+        <th>Back cliff</th>
+        <th>Back low</th>
+        <th>Back beach</th>
+        <th>Back dune</th>
+        <th>Back wetl</th>
+        <th>Back lag</th>
+        <th>Back delt</th>
+        <th>Back chan</th>
+        <th>Back man</th>
+        <th>Acc along</th>
+        <th>Acc back</th>
+        <th>Stage back</th>
+        <th>Acc desc</th>
+        <th>Actions</th>
+      </tr>
+
+      <% @segments.each do |segment| %>
+      <tr>
+        <td><%= segment.segment_id %></td>
+        <td><%= segment.esi_prim %></td>
+        <td><%= segment.esi_sec %></td>
+        <td><%= segment.back_cliff %></td>
+        <td><%= segment.back_low %></td>
+        <td><%= segment.back_beach %></td>
+        <td><%= segment.back_dune %></td>
+        <td><%= segment.back_wetl %></td>
+        <td><%= segment.back_lag %></td>
+        <td><%= segment.back_delt %></td>
+        <td><%= segment.back_chan %></td>
+        <td><%= segment.back_man %></td>
+        <td><%= segment.acc_along %></td>
+        <td><%= segment.acc_back %></td>
+        <td><%= segment.stage_back %></td>
+        <td><%= segment.acc_desc %></td>
+        <td>
+          <a href="/segments/<%= segment.id %>" class="btn btn-primary">Show</a>
+          <a href="/segments/<%= segment.id %>/edit" class="btn btn-warning">Edit</a>
+          <a href="/delete_segment/<%= segment.id %>" class="btn btn-danger" rel="nofollow">Delete</a>
+        </td>
+      </tr>
+      <% end %>
+    </table>
+  </div>
+</div>

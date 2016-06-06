@@ -1,0 +1,58 @@
+<div class="page-header">
+  <h1>
+    Surveys
+    <a href="/surveys/new" class="btn btn-lg btn-success">New Survey</a>
+  </h1>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <table class="table table-striped table-hover">
+      <tr>
+        <th>Survey</th>
+        <th>Segment</th>
+        <th>Seg list</th>
+        <th>Surv date</th>
+        <th>Surv dint</th>
+        <th>Start time</th>
+        <th>Stop time</th>
+        <th>Tide hgt</th>
+        <th>Surv type</th>
+        <th>Surv per1</th>
+        <th>Surv per2</th>
+        <th>Surv per3</th>
+        <th>Surv per4</th>
+        <th>Surv per5</th>
+        <th>Surv per6</th>
+        <th>Surv comm</th>
+        <th>Actions</th>
+      </tr>
+
+      <% @surveys.each do |survey| %>
+      <tr>
+        <td><%= survey.survey_id %></td>
+        <td><%= survey.segment_id %></td>
+        <td><%= survey.seg_list %></td>
+        <td><%= survey.surv_date %></td>
+        <td><%= survey.surv_dint %></td>
+        <td><%= survey.start_time %></td>
+        <td><%= survey.stop_time %></td>
+        <td><%= survey.tide_hgt %></td>
+        <td><%= survey.surv_type %></td>
+        <td><%= survey.surv_per1 %></td>
+        <td><%= survey.surv_per2 %></td>
+        <td><%= survey.surv_per3 %></td>
+        <td><%= survey.surv_per4 %></td>
+        <td><%= survey.surv_per5 %></td>
+        <td><%= survey.surv_per6 %></td>
+        <td><%= survey.surv_comm %></td>
+        <td>
+          <a href="/surveys/<%= survey.id %>" class="btn btn-primary">Show</a>
+          <a href="/surveys/<%= survey.id %>/edit" class="btn btn-warning">Edit</a>
+          <a href="/delete_survey/<%= survey.id %>" class="btn btn-danger" rel="nofollow">Delete</a>
+        </td>
+      </tr>
+      <% end %>
+    </table>
+  </div>
+</div>

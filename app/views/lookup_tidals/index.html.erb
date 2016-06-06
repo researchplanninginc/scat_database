@@ -1,0 +1,30 @@
+<div class="page-header">
+  <h1>
+    Lookup tidals
+    <a href="/lookup_tidals/new" class="btn btn-lg btn-success">New Lookup tidal</a>
+  </h1>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <table class="table table-striped table-hover">
+      <tr>
+        <th>Tidal code</th>
+        <th>Description</th>
+        <th>Actions</th>
+      </tr>
+
+      <% @lookup_tidals.each do |lookup_tidal| %>
+      <tr>
+        <td><%= lookup_tidal.tidal_code %></td>
+        <td><%= lookup_tidal.description %></td>
+        <td>
+          <a href="/lookup_tidals/<%= lookup_tidal.id %>" class="btn btn-primary">Show</a>
+          <a href="/lookup_tidals/<%= lookup_tidal.id %>/edit" class="btn btn-warning">Edit</a>
+          <a href="/delete_lookup_tidal/<%= lookup_tidal.id %>" class="btn btn-danger" rel="nofollow">Delete</a>
+        </td>
+      </tr>
+      <% end %>
+    </table>
+  </div>
+</div>

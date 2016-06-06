@@ -1,0 +1,49 @@
+<div class="page-header">
+  <h3>Pit #<%= @pit.id %></h3>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <dl class="dl-horizontal">
+      <dt>Pit</dt>
+      <dd><%= @pit.pit_id %></dd>
+
+      <dt>Pit name</dt>
+      <dd><%= @pit.pit_name %></dd>
+
+      <dt>Survey</dt>
+      <dd><%= @pit.survey_id %></dd>
+
+      <dt>Tidal zone</dt>
+      <dd><%= @pit.tidal_zone %></dd>
+
+      <dt>P depth</dt>
+      <dd><%= @pit.p_depth %></dd>
+
+      <dt>P oil char</dt>
+      <dd><%= @pit.p_oil_char %></dd>
+
+      <dt>P oil bot</dt>
+      <dd><%= @pit.p_oil_bot %></dd>
+
+      <dt>P oil top</dt>
+      <dd><%= @pit.p_oil_top %></dd>
+
+      <dt>P oil dist</dt>
+      <dd><%= @pit.p_oil_dist %></dd>
+
+    </dl>
+
+    <div class="btn-group btn-group-justified">
+      <a href="/pits" class="btn btn-primary">
+        Back
+      </a>
+      <a href="/pits/<%= @pit.id %>/edit" class="btn btn-warning">
+        Edit
+      </a>
+      <a href="/delete_pit/<%= @pit.id %>" class="btn btn-danger" rel="nofollow">
+        Delete
+      </a>
+    </div>
+  </div>
+</div>

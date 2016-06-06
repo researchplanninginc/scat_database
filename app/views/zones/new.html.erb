@@ -1,0 +1,235 @@
+<!-- Validation failure messages -->
+<% if @zone.errors.any? %>
+  <% @zone.errors.full_messages.each do |message| %>
+    <div class="alert alert-dismissable alert-danger">
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+      <%= message %>
+    </div>
+  <% end %>
+<% end %>
+
+<div class="page-header">
+  <h3>Add Zone</h3>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <form action="/create_zone" method="post">
+      <!-- Hidden input for authenticity token to protect from forgery -->
+      <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
+
+      <!-- Label and input for zone_id -->
+      <div class="form-group">
+        <label for="zone_id" class="control-label">
+          Zone
+        </label>
+
+        <input type="text" id="zone_id" name="zone_id" placeholder="Zone" class="form-control" value="<%= @zone.zone_id %>">
+      </div>
+
+      <!-- Label and input for zone_name -->
+      <div class="form-group">
+        <label for="zone_name" class="control-label">
+          Zone name
+        </label>
+
+        <input type="text" id="zone_name" name="zone_name" placeholder="Zone name" class="form-control" value="<%= @zone.zone_name %>">
+      </div>
+
+      <!-- Label and input for survey_id -->
+      <div class="form-group">
+        <label for="survey_id" class="control-label">
+          Survey
+        </label>
+
+        <input type="text" id="survey_id" name="survey_id" placeholder="Survey" class="form-control" value="<%= @zone.survey_id %>">
+      </div>
+
+      <!-- Label and input for tidal_zone -->
+      <div class="form-group">
+        <label for="tidal_zone" class="control-label">
+          Tidal zone
+        </label>
+
+        <input type="text" id="tidal_zone" name="tidal_zone" placeholder="Tidal zone" class="form-control" value="<%= @zone.tidal_zone %>">
+      </div>
+
+      <!-- Label and input for width -->
+      <div class="form-group">
+        <label for="width" class="control-label">
+          Width
+        </label>
+
+        <input type="text" id="width" name="width" placeholder="Width" class="form-control" value="<%= @zone.width %>">
+      </div>
+
+      <!-- Label and input for oil_dist -->
+      <div class="form-group">
+        <label for="oil_dist" class="control-label">
+          Oil dist
+        </label>
+
+        <input type="text" id="oil_dist" name="oil_dist" placeholder="Oil dist" class="form-control" value="<%= @zone.oil_dist %>">
+      </div>
+
+      <!-- Label and input for oil_thick -->
+      <div class="form-group">
+        <label for="oil_thick" class="control-label">
+          Oil thick
+        </label>
+
+        <input type="text" id="oil_thick" name="oil_thick" placeholder="Oil thick" class="form-control" value="<%= @zone.oil_thick %>">
+      </div>
+
+      <!-- Label and input for oil_char -->
+      <div class="form-group">
+        <label for="oil_char" class="control-label">
+          Oil char
+        </label>
+
+        <input type="text" id="oil_char" name="oil_char" placeholder="Oil char" class="form-control" value="<%= @zone.oil_char %>">
+      </div>
+
+      <!-- Label and input for substr -->
+      <div class="form-group">
+        <label for="substr" class="control-label">
+          Substr
+        </label>
+
+        <input type="text" id="substr" name="substr" placeholder="Substr" class="form-control" value="<%= @zone.substr %>">
+      </div>
+
+      <!-- Label and input for tb_cnt -->
+      <div class="form-group">
+        <label for="tb_cnt" class="control-label">
+          Tb cnt
+        </label>
+
+        <input type="text" id="tb_cnt" name="tb_cnt" placeholder="Tb cnt" class="form-control" value="<%= @zone.tb_cnt %>">
+      </div>
+
+      <!-- Label and input for tb_area -->
+      <div class="form-group">
+        <label for="tb_area" class="control-label">
+          Tb area
+        </label>
+
+        <input type="text" id="tb_area" name="tb_area" placeholder="Tb area" class="form-control" value="<%= @zone.tb_area %>">
+      </div>
+
+      <!-- Label and input for tb_arunit -->
+      <div class="form-group">
+        <label for="tb_arunit" class="control-label">
+          Tb arunit
+        </label>
+
+        <input type="text" id="tb_arunit" name="tb_arunit" placeholder="Tb arunit" class="form-control" value="<%= @zone.tb_arunit %>">
+      </div>
+
+      <!-- Label and input for tb_mavsize -->
+      <div class="form-group">
+        <label for="tb_mavsize" class="control-label">
+          Tb mavsize
+        </label>
+
+        <input type="text" id="tb_mavsize" name="tb_mavsize" placeholder="Tb mavsize" class="form-control" value="<%= @zone.tb_mavsize %>">
+      </div>
+
+      <!-- Label and input for tb_ -->
+      <div class="form-group">
+        <label for="tb_" class="control-label">
+          Tb 
+        </label>
+
+        <input type="text" id="tb_" name="tb_" placeholder="Tb " class="form-control" value="<%= @zone.tb_ %>">
+      </div>
+
+      <!-- Label and input for lgsize -->
+      <div class="form-group">
+        <label for="lgsize" class="control-label">
+          Lgsize
+        </label>
+
+        <input type="text" id="lgsize" name="lgsize" placeholder="Lgsize" class="form-control" value="<%= @zone.lgsize %>">
+      </div>
+
+      <!-- Label and input for tb_type -->
+      <div class="form-group">
+        <label for="tb_type" class="control-label">
+          Tb type
+        </label>
+
+        <input type="text" id="tb_type" name="tb_type" placeholder="Tb type" class="form-control" value="<%= @zone.tb_type %>">
+      </div>
+
+      <!-- Label and input for p_canopy -->
+      <div class="form-group">
+        <label for="p_canopy" class="control-label">
+          P canopy
+        </label>
+
+        <input type="text" id="p_canopy" name="p_canopy" placeholder="P canopy" class="form-control" value="<%= @zone.p_canopy %>">
+      </div>
+
+      <!-- Label and input for p_oilbot -->
+      <div class="form-group">
+        <label for="p_oilbot" class="control-label">
+          P oilbot
+        </label>
+
+        <input type="text" id="p_oilbot" name="p_oilbot" placeholder="P oilbot" class="form-control" value="<%= @zone.p_oilbot %>">
+      </div>
+
+      <!-- Label and input for p_oiltop -->
+      <div class="form-group">
+        <label for="p_oiltop" class="control-label">
+          P oiltop
+        </label>
+
+        <input type="text" id="p_oiltop" name="p_oiltop" placeholder="P oiltop" class="form-control" value="<%= @zone.p_oiltop %>">
+      </div>
+
+      <!-- Label and input for esi -->
+      <div class="form-group">
+        <label for="esi" class="control-label">
+          Esi
+        </label>
+
+        <input type="text" id="esi" name="esi" placeholder="Esi" class="form-control" value="<%= @zone.esi %>">
+      </div>
+
+      <!-- Label and input for oil_cat -->
+      <div class="form-group">
+        <label for="oil_cat" class="control-label">
+          Oil cat
+        </label>
+
+        <input type="text" id="oil_cat" name="oil_cat" placeholder="Oil cat" class="form-control" value="<%= @zone.oil_cat %>">
+      </div>
+
+      <!-- Label and input for source -->
+      <div class="form-group">
+        <label for="source" class="control-label">
+          Source
+        </label>
+
+        <input type="text" id="source" name="source" placeholder="Source" class="form-control" value="<%= @zone.source %>">
+      </div>
+
+      <!-- Label and input for zone_comm -->
+      <div class="form-group">
+        <label for="zone_comm" class="control-label">
+          Zone comm
+        </label>
+
+        <textarea id="zone_comm" name="zone_comm" placeholder="Zone comm" class="form-control" rows="3"><%= @zone.zone_comm %></textarea>
+      </div>
+
+      <button class="btn btn-success">
+        Create Zone
+      </button>
+      or
+      <a href="/zones">Cancel</a>
+    </form>
+  </div>
+</div>

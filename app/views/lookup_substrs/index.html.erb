@@ -1,0 +1,30 @@
+<div class="page-header">
+  <h1>
+    Lookup substrs
+    <a href="/lookup_substrs/new" class="btn btn-lg btn-success">New Lookup substr</a>
+  </h1>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <table class="table table-striped table-hover">
+      <tr>
+        <th>Substr code</th>
+        <th>Description</th>
+        <th>Actions</th>
+      </tr>
+
+      <% @lookup_substrs.each do |lookup_substr| %>
+      <tr>
+        <td><%= lookup_substr.substr_code %></td>
+        <td><%= lookup_substr.description %></td>
+        <td>
+          <a href="/lookup_substrs/<%= lookup_substr.id %>" class="btn btn-primary">Show</a>
+          <a href="/lookup_substrs/<%= lookup_substr.id %>/edit" class="btn btn-warning">Edit</a>
+          <a href="/delete_lookup_substr/<%= lookup_substr.id %>" class="btn btn-danger" rel="nofollow">Delete</a>
+        </td>
+      </tr>
+      <% end %>
+    </table>
+  </div>
+</div>

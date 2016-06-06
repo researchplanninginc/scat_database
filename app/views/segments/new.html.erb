@@ -1,0 +1,160 @@
+<!-- Validation failure messages -->
+<% if @segment.errors.any? %>
+  <% @segment.errors.full_messages.each do |message| %>
+    <div class="alert alert-dismissable alert-danger">
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+      <%= message %>
+    </div>
+  <% end %>
+<% end %>
+
+<div class="page-header">
+  <h3>Add Segment</h3>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <form action="/create_segment" method="post">
+      <!-- Hidden input for authenticity token to protect from forgery -->
+      <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
+
+      <!-- Label and input for segment_id -->
+      <div class="form-group">
+        <label for="segment_id" class="control-label">
+          Segment
+        </label>
+
+        <input type="text" id="segment_id" name="segment_id" placeholder="Segment" class="form-control" value="<%= @segment.segment_id %>">
+      </div>
+
+      <!-- Label and input for esi_prim -->
+      <div class="form-group">
+        <label for="esi_prim" class="control-label">
+          Esi prim
+        </label>
+
+        <input type="text" id="esi_prim" name="esi_prim" placeholder="Esi prim" class="form-control" value="<%= @segment.esi_prim %>">
+      </div>
+
+      <!-- Label and input for esi_sec -->
+      <div class="form-group">
+        <label for="esi_sec" class="control-label">
+          Esi sec
+        </label>
+
+        <input type="text" id="esi_sec" name="esi_sec" placeholder="Esi sec" class="form-control" value="<%= @segment.esi_sec %>">
+      </div>
+
+      <!-- Label and input for back_cliff -->
+      <div class="checkbox">
+        <label for="back_cliff">
+          <input type="checkbox" id="back_cliff" name="back_cliff" value="1" <%= "checked" if @segment.back_cliff %>>
+          Back cliff
+        </label>
+      </div>
+
+      <!-- Label and input for back_low -->
+      <div class="checkbox">
+        <label for="back_low">
+          <input type="checkbox" id="back_low" name="back_low" value="1" <%= "checked" if @segment.back_low %>>
+          Back low
+        </label>
+      </div>
+
+      <!-- Label and input for back_beach -->
+      <div class="checkbox">
+        <label for="back_beach">
+          <input type="checkbox" id="back_beach" name="back_beach" value="1" <%= "checked" if @segment.back_beach %>>
+          Back beach
+        </label>
+      </div>
+
+      <!-- Label and input for back_dune -->
+      <div class="checkbox">
+        <label for="back_dune">
+          <input type="checkbox" id="back_dune" name="back_dune" value="1" <%= "checked" if @segment.back_dune %>>
+          Back dune
+        </label>
+      </div>
+
+      <!-- Label and input for back_wetl -->
+      <div class="checkbox">
+        <label for="back_wetl">
+          <input type="checkbox" id="back_wetl" name="back_wetl" value="1" <%= "checked" if @segment.back_wetl %>>
+          Back wetl
+        </label>
+      </div>
+
+      <!-- Label and input for back_lag -->
+      <div class="checkbox">
+        <label for="back_lag">
+          <input type="checkbox" id="back_lag" name="back_lag" value="1" <%= "checked" if @segment.back_lag %>>
+          Back lag
+        </label>
+      </div>
+
+      <!-- Label and input for back_delt -->
+      <div class="checkbox">
+        <label for="back_delt">
+          <input type="checkbox" id="back_delt" name="back_delt" value="1" <%= "checked" if @segment.back_delt %>>
+          Back delt
+        </label>
+      </div>
+
+      <!-- Label and input for back_chan -->
+      <div class="checkbox">
+        <label for="back_chan">
+          <input type="checkbox" id="back_chan" name="back_chan" value="1" <%= "checked" if @segment.back_chan %>>
+          Back chan
+        </label>
+      </div>
+
+      <!-- Label and input for back_man -->
+      <div class="checkbox">
+        <label for="back_man">
+          <input type="checkbox" id="back_man" name="back_man" value="1" <%= "checked" if @segment.back_man %>>
+          Back man
+        </label>
+      </div>
+
+      <!-- Label and input for acc_along -->
+      <div class="checkbox">
+        <label for="acc_along">
+          <input type="checkbox" id="acc_along" name="acc_along" value="1" <%= "checked" if @segment.acc_along %>>
+          Acc along
+        </label>
+      </div>
+
+      <!-- Label and input for acc_back -->
+      <div class="checkbox">
+        <label for="acc_back">
+          <input type="checkbox" id="acc_back" name="acc_back" value="1" <%= "checked" if @segment.acc_back %>>
+          Acc back
+        </label>
+      </div>
+
+      <!-- Label and input for stage_back -->
+      <div class="checkbox">
+        <label for="stage_back">
+          <input type="checkbox" id="stage_back" name="stage_back" value="1" <%= "checked" if @segment.stage_back %>>
+          Stage back
+        </label>
+      </div>
+
+      <!-- Label and input for acc_desc -->
+      <div class="form-group">
+        <label for="acc_desc" class="control-label">
+          Acc desc
+        </label>
+
+        <textarea id="acc_desc" name="acc_desc" placeholder="Acc desc" class="form-control" rows="3"><%= @segment.acc_desc %></textarea>
+      </div>
+
+      <button class="btn btn-success">
+        Create Segment
+      </button>
+      or
+      <a href="/segments">Cancel</a>
+    </form>
+  </div>
+</div>

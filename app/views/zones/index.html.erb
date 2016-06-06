@@ -1,0 +1,72 @@
+<div class="page-header">
+  <h1>
+    Zones
+    <a href="/zones/new" class="btn btn-lg btn-success">New Zone</a>
+  </h1>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <table class="table table-striped table-hover">
+      <tr>
+        <th>Zone</th>
+        <th>Zone name</th>
+        <th>Survey</th>
+        <th>Tidal zone</th>
+        <th>Width</th>
+        <th>Oil dist</th>
+        <th>Oil thick</th>
+        <th>Oil char</th>
+        <th>Substr</th>
+        <th>Tb cnt</th>
+        <th>Tb area</th>
+        <th>Tb arunit</th>
+        <th>Tb mavsize</th>
+        <th>Tb </th>
+        <th>Lgsize</th>
+        <th>Tb type</th>
+        <th>P canopy</th>
+        <th>P oilbot</th>
+        <th>P oiltop</th>
+        <th>Esi</th>
+        <th>Oil cat</th>
+        <th>Source</th>
+        <th>Zone comm</th>
+        <th>Actions</th>
+      </tr>
+
+      <% @zones.each do |zone| %>
+      <tr>
+        <td><%= zone.zone_id %></td>
+        <td><%= zone.zone_name %></td>
+        <td><%= zone.survey_id %></td>
+        <td><%= zone.tidal_zone %></td>
+        <td><%= zone.width %></td>
+        <td><%= zone.oil_dist %></td>
+        <td><%= zone.oil_thick %></td>
+        <td><%= zone.oil_char %></td>
+        <td><%= zone.substr %></td>
+        <td><%= zone.tb_cnt %></td>
+        <td><%= zone.tb_area %></td>
+        <td><%= zone.tb_arunit %></td>
+        <td><%= zone.tb_mavsize %></td>
+        <td><%= zone.tb_ %></td>
+        <td><%= zone.lgsize %></td>
+        <td><%= zone.tb_type %></td>
+        <td><%= zone.p_canopy %></td>
+        <td><%= zone.p_oilbot %></td>
+        <td><%= zone.p_oiltop %></td>
+        <td><%= zone.esi %></td>
+        <td><%= zone.oil_cat %></td>
+        <td><%= zone.source %></td>
+        <td><%= zone.zone_comm %></td>
+        <td>
+          <a href="/zones/<%= zone.id %>" class="btn btn-primary">Show</a>
+          <a href="/zones/<%= zone.id %>/edit" class="btn btn-warning">Edit</a>
+          <a href="/delete_zone/<%= zone.id %>" class="btn btn-danger" rel="nofollow">Delete</a>
+        </td>
+      </tr>
+      <% end %>
+    </table>
+  </div>
+</div>

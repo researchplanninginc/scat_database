@@ -1,0 +1,30 @@
+<div class="page-header">
+  <h1>
+    Lookup thicks
+    <a href="/lookup_thicks/new" class="btn btn-lg btn-success">New Lookup thick</a>
+  </h1>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <table class="table table-striped table-hover">
+      <tr>
+        <th>Thick code</th>
+        <th>Description</th>
+        <th>Actions</th>
+      </tr>
+
+      <% @lookup_thicks.each do |lookup_thick| %>
+      <tr>
+        <td><%= lookup_thick.thick_code %></td>
+        <td><%= lookup_thick.description %></td>
+        <td>
+          <a href="/lookup_thicks/<%= lookup_thick.id %>" class="btn btn-primary">Show</a>
+          <a href="/lookup_thicks/<%= lookup_thick.id %>/edit" class="btn btn-warning">Edit</a>
+          <a href="/delete_lookup_thick/<%= lookup_thick.id %>" class="btn btn-danger" rel="nofollow">Delete</a>
+        </td>
+      </tr>
+      <% end %>
+    </table>
+  </div>
+</div>
