@@ -2,11 +2,11 @@
 
 This application is a demonstration of an open-source Ruby-on-Rails application for storing and querying Shoreline Cleanup and Assessment Technique (SCAT) data collected during an oil spill.  Note that this database is compliant with NOAA's SCAT Data Standard.
 
-Things you may want to cover:
+Versions:
 
 * Ruby version 2.2.4
 * Rails 4.2.6
-* ...
+
 
 
 Please feel free to use a different markup language if you do not plan to run
