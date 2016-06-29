@@ -1,4 +1,7 @@
 class PeopleController < ApplicationController
+  def full_name
+     "#{last_name} #{first_name}"
+  end
   def index
     @people = Person.all
     respond_to do |format|

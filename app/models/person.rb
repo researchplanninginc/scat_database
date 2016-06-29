@@ -1,11 +1,11 @@
 class Person < ActiveRecord::Base
-  belongs_to :person , :class_name => "Survey", :foreign_key => "person_id"
-  belongs_to :person , :class_name => "Survey", :foreign_key => "person_id"
-  belongs_to :person , :class_name => "Survey", :foreign_key => "person_id"
-  belongs_to :person , :class_name => "Survey", :foreign_key => "person_id"
-  belongs_to :person , :class_name => "Survey", :foreign_key => "person_id"
-  belongs_to :person , :class_name => "Survey", :foreign_key => "person_id"
 
+
+  has_many :surveys , :class_name => "People", :foreign_key => "surv_per1"
+
+  def full_name
+     "#{last_name} #{first_name}"
+  end
 
   def self.to_csv
     attributes = %w{person_id last_name first_name org}

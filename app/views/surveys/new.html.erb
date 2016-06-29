@@ -36,15 +36,6 @@
         <input type="text" id="segment_id" name="segment_id" placeholder="Segment" class="form-control" value="<%= @survey.segment_id %>">
       </div>
 
-      <!-- Label and input for seg_list -->
-      <div class="form-group">
-        <label for="seg_list" class="control-label">
-          Seg list
-        </label>
-
-        <input type="text" id="seg_list" name="seg_list" placeholder="Seg list" class="form-control" value="<%= @survey.seg_list %>">
-      </div>
-
       <!-- Label and input for surv_date -->
       <div class="form-group">
         <label for="surv_date" class="control-label">
@@ -54,31 +45,29 @@
         <input type="text" id="surv_date" name="surv_date" placeholder="Surv date" class="form-control" value="<%= @survey.surv_date %>">
       </div>
 
-      <!-- Label and input for surv_dint -->
-      <div class="form-group">
-        <label for="surv_dint" class="control-label">
-          Surv dint
-        </label>
 
-        <input type="text" id="surv_dint" name="surv_dint" placeholder="Surv dint" class="form-control" value="<%= @survey.surv_dint %>">
-      </div>
+
+
+
+
 
       <!-- Label and input for start_time -->
       <div class="form-group">
-        <label for="start_time" class="control-label">
-          Start time
-        </label>
-
+        <div class="col-sm-6">
+          <label for="start_time" class="control-label">
+            Start time
+          </label>
         <input type="text" id="start_time" name="start_time" placeholder="Start time" class="form-control" value="<%= @survey.start_time %>">
-      </div>
+        </div>
 
       <!-- Label and input for stop_time -->
-      <div class="form-group">
-        <label for="stop_time" class="control-label">
-          Stop time
-        </label>
+        <div class="col-sm-6">
+          <label for="stop_time" class="control-label">
+            Stop time
+          </label>
 
-        <input type="text" id="stop_time" name="stop_time" placeholder="Stop time" class="form-control" value="<%= @survey.stop_time %>">
+          <input type="text" id="stop_time" name="stop_time" placeholder="Stop time" class="form-control" value="<%= @survey.stop_time %>">
+        </div>
       </div>
 
       <!-- Label and input for tide_hgt -->
@@ -101,57 +90,57 @@
 
       <!-- Label and input for surv_per1 -->
       <div class="form-group">
-        <label for="surv_per1" class="control-label">
-          Surv per1
-        </label>
+        <div class="col-sm-4">
+          <label for="surv_per1" class="control-label">
+            Personnel 1 (RP)
+          </label>
+          <%= select_tag(:person_id, options_from_collection_for_select(Person.order("last_name, first_name ASC"), :id, :full_name, @survey.surv_per1), :class => "form-control") %>
 
-        <input type="text" id="surv_per1" name="surv_per1" placeholder="Surv per1" class="form-control" value="<%= @survey.surv_per1 %>">
-      </div>
-
-      <!-- Label and input for surv_per2 -->
-      <div class="form-group">
-        <label for="surv_per2" class="control-label">
-          Surv per2
-        </label>
-
-        <input type="text" id="surv_per2" name="surv_per2" placeholder="Surv per2" class="form-control" value="<%= @survey.surv_per2 %>">
-      </div>
-
-      <!-- Label and input for surv_per3 -->
-      <div class="form-group">
-        <label for="surv_per3" class="control-label">
-          Surv per3
-        </label>
-
-        <input type="text" id="surv_per3" name="surv_per3" placeholder="Surv per3" class="form-control" value="<%= @survey.surv_per3 %>">
+        </div>
+        <!-- Label and input for surv_per2 -->
+        <div class="col-sm-4">
+            <label for="surv_per2" class="control-label">
+              Personnel 2 (State)
+            </label>
+          <%= select_tag(:person_id, options_from_collection_for_select(Person.order("last_name, first_name ASC"), :id, :full_name, @survey.surv_per2), :class => "form-control") %>
+        </div>
+        <!-- Label and input for surv_per2 -->
+        <div class="col-sm-4">
+            <label for="surv_per3" class="control-label">
+              Personnel 3 (Federal)
+            </label>
+          <%= select_tag(:person_id, options_from_collection_for_select(Person.order("last_name, first_name ASC"), :id, :full_name, @survey.surv_per3), :class => "form-control") %>
+        </div>
       </div>
 
       <!-- Label and input for surv_per4 -->
       <div class="form-group">
-        <label for="surv_per4" class="control-label">
-          Surv per4
-        </label>
+        <div class="col-sm-4">
+            <label for="surv_per4" class="control-label">
+              Personnel 4
+            </label>
+          <%= select_tag(:person_id, options_from_collection_for_select(Person.order("last_name, first_name ASC"), :id, :full_name, @survey.surv_per4), :class => "form-control") %>
+        </div>
 
-        <input type="text" id="surv_per4" name="surv_per4" placeholder="Surv per4" class="form-control" value="<%= @survey.surv_per4 %>">
+        <div class="col-sm-4">
+            <label for="surv_per5" class="control-label">
+              Personnel 5
+            </label>
+          <%= select_tag(:person_id, options_from_collection_for_select(Person.order("last_name, first_name ASC"), :id, :full_name, @survey.surv_per5), :class => "form-control") %>
+        </div>
+        <div class="col-sm-4">
+            <label for="surv_per6" class="control-label">
+              Personnel 6
+            </label>
+          <%= select_tag(:person_id, options_from_collection_for_select(Person.order("last_name, first_name ASC"), :id, :full_name, @survey.surv_per6), :class => "form-control") %>
+          <p class="help-block">
+            <a href="/people/new">or add new</a>
+          </p>
+        </div>
       </div>
+            <br>
 
-      <!-- Label and input for surv_per5 -->
-      <div class="form-group">
-        <label for="surv_per5" class="control-label">
-          Surv per5
-        </label>
 
-        <input type="text" id="surv_per5" name="surv_per5" placeholder="Surv per5" class="form-control" value="<%= @survey.surv_per5 %>">
-      </div>
-
-      <!-- Label and input for surv_per6 -->
-      <div class="form-group">
-        <label for="surv_per6" class="control-label">
-          Surv per6
-        </label>
-
-        <input type="text" id="surv_per6" name="surv_per6" placeholder="Surv per6" class="form-control" value="<%= @survey.surv_per6 %>">
-      </div>
 
       <!-- Label and input for surv_comm -->
       <div class="form-group">

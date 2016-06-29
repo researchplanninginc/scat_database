@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
+
+  root :controller => 'pages', :action => 'dashboard'
+  # static pages
+  get 'pages/dashboard'
+  get 'pages/home'
+  get 'pages/about'
+
   # Routes for the Lookup_tidal resource:
   # CREATE
   get "/lookup_tidals/new", :controller => "lookup_tidals", :action => "new"
@@ -121,7 +128,7 @@ Rails.application.routes.draw do
   devise_for :users
   # Routes for the Pit resource:
   # CREATE
-  root "surveys#index"
+
 
   get "/pits/new", :controller => "pits", :action => "new"
   post "/create_pit", :controller => "pits", :action => "create"

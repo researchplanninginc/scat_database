@@ -36,14 +36,6 @@
         <input type="text" id="segment_id" name="segment_id" placeholder="Segment" class="form-control" value="<%= @survey.segment_id %>">
       </div>
 
-      <!-- Label and input for seg_list -->
-      <div class="form-group">
-        <label for="seg_list" class="control-label">
-          Seg list
-        </label>
-
-        <input type="text" id="seg_list" name="seg_list" placeholder="Seg list" class="form-control" value="<%= @survey.seg_list %>">
-      </div>
 
       <!-- Label and input for surv_date -->
       <div class="form-group">
@@ -54,14 +46,6 @@
         <input type="text" id="surv_date" name="surv_date" placeholder="Surv date" class="form-control" value="<%= @survey.surv_date %>">
       </div>
 
-      <!-- Label and input for surv_dint -->
-      <div class="form-group">
-        <label for="surv_dint" class="control-label">
-          Surv dint
-        </label>
-
-        <input type="text" id="surv_dint" name="surv_dint" placeholder="Surv dint" class="form-control" value="<%= @survey.surv_dint %>">
-      </div>
 
       <!-- Label and input for start_time -->
       <div class="form-group">
@@ -105,7 +89,11 @@
           Surv per1
         </label>
 
-        <input type="text" id="surv_per1" name="surv_per1" placeholder="Surv per1" class="form-control" value="<%= @survey.surv_per1 %>">
+
+        <%= select_tag(:person_id, options_from_collection_for_select(People.order("name ASC"), :id, :last_name, @survey.surv_per1), :class => "form-control") %>
+        <p class="help-block">
+          <a href="/people/new">or add new</a>
+        </p>
       </div>
 
       <!-- Label and input for surv_per2 -->

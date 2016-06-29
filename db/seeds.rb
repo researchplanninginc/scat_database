@@ -68,11 +68,22 @@ LookupThick.create!([
   {thick_code: "ST", description: "Stain (no scrape)"},
   {thick_code: "FL", description: "Film"}
 ])
+LookupTidal.create!([
+  {tidal_code: "LI", description: "Lower intertidal"},
+  {tidal_code: "MI", description: "Middle intertidal"},
+  {tidal_code: "UI", description: "Upper intertidal"},
+  {tidal_code: "SU", description: "Supratidal"},
+  {tidal_code: "LI/MI", description: "Lower-middle intertidal"},
+  {tidal_code: "MI/UI", description: "Middle-upper intertidal"},
+  {tidal_code: "UI/SU", description: "Upper-supratidal"},
+  {tidal_code: "LI/MI/UI", description: "Lower-upper intertidal"},
+  {tidal_code: "LI/MI/UI/SU", description: "Lower-supratidal"}
+])
 Person.create!([
   {person_id: "1", last_name: "John", first_name: "Doe", org: "FED"},
   {person_id: "2", last_name: "Jane", first_name: "Doe", org: "FED"},
-  {person_id: "3", last_name: "Jim", first_name: "Test", org: "RP"},
-  {person_id: "4", last_name: "Jan", first_name: "Test", org: "RP"},
-  {person_id: "5", last_name: "Joe", first_name: "Fake", org: "STATE"},
-  {person_id: "6", last_name: "Jill", first_name: "Fake", org: "STATE"},
+  {person_id: "3", last_name: "Joe", first_name: "Fake", org: "STATE"},
+  {person_id: "4", last_name: "Jan", first_name: "Fake", org: "STATE"},
+  {person_id: "5", last_name: "Jake", first_name: "Test", org: "RP"},
+  {person_id: "6", last_name: "Jill", first_name: "Test", org: "RP"},
 ])
