@@ -18,6 +18,15 @@
       <!-- Hidden input for authenticity token to protect from forgery -->
       <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
 
+      <!-- Label and input for survey_id -->
+      <div class="form-group">
+        <label for="survey_id" class="control-label">
+          Survey
+        </label>
+
+        <input type="text" id="survey_id" name="survey_id" placeholder="Survey" class="form-control" value="<%= @zone.survey_id %>">
+      </div>
+
       <!-- Label and input for zone_id -->
       <div class="form-group">
         <label for="zone_id" class="control-label">
@@ -36,14 +45,7 @@
         <input type="text" id="zone_name" name="zone_name" placeholder="Zone name" class="form-control" value="<%= @zone.zone_name %>">
       </div>
 
-      <!-- Label and input for survey_id -->
-      <div class="form-group">
-        <label for="survey_id" class="control-label">
-          Survey
-        </label>
 
-        <input type="text" id="survey_id" name="survey_id" placeholder="Survey" class="form-control" value="<%= @zone.survey_id %>">
-      </div>
 
       <!-- Label and input for tidal_zone -->
       <div class="form-group">
@@ -138,7 +140,7 @@
       <!-- Label and input for tb_ -->
       <div class="form-group">
         <label for="tb_" class="control-label">
-          Tb 
+          Tb
         </label>
 
         <input type="text" id="tb_" name="tb_" placeholder="Tb " class="form-control" value="<%= @zone.tb_ %>">

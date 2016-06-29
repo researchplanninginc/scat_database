@@ -1,7 +1,12 @@
 class Person < ActiveRecord::Base
 
 
-  has_many :surveys , :class_name => "People", :foreign_key => "surv_per1"
+  has_many :surveys , :class_name => "Survey1", :foreign_key => "surv_per1"
+  has_many :surveys , :class_name => "Survey2", :foreign_key => "surv_per2"
+  has_many :surveys , :class_name => "Survey3", :foreign_key => "surv_per3"
+  has_many :surveys , :class_name => "Survey4", :foreign_key => "surv_per4"
+  has_many :surveys , :class_name => "Survey5", :foreign_key => "surv_per5"
+  has_many :surveys , :class_name => "Survey6", :foreign_key => "surv_per6"
 
   def full_name
      "#{last_name} #{first_name}"

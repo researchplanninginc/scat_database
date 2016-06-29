@@ -39,17 +39,17 @@
         <td><%= survey.stop_time %></td>
         <td><%= survey.tide_hgt %></td>
         <td><%= survey.surv_type %></td>
-        <td><%= survey.surv_per1 %></td>
-        <td><%= survey.surv_per2 %></td>
-        <td><%= survey.surv_per3 %></td>
-        <td><%= survey.surv_per4 %></td>
-        <td><%= survey.surv_per5 %></td>
-        <td><%= survey.surv_per6 %></td>
+        <td><%= survey.person1.full_name %></td>
+        <td><%= survey.person2.full_name %></td>
+        <td><%= survey.person3.full_name %></td>
+        <td><%= survey.person4.full_name %></td>
+        <td><%= survey.person5.full_name %></td>
+        <td><%= survey.person6.full_name %></td>
         <td><%= survey.surv_comm %></td>
         <td>
-          <a href="/surveys/<%= survey.id %>" class="btn btn-primary">Show</a>
-          <a href="/surveys/<%= survey.id %>/edit" class="btn btn-warning">Edit</a>
-          <a href="/delete_survey/<%= survey.id %>" class="btn btn-danger" rel="nofollow">Delete</a>
+          <a href="/surveys/<%= survey.id %>" class="btn btn-primary"><i class="fa fa-search-plus"></i></a>
+          <a href="/surveys/<%= survey.id %>/edit" class="btn btn-warning"><i class="fa fa-edit"></i></a>
+          <a href="/delete_survey/<%= survey.id %>" class="btn btn-danger" rel="nofollow"><i class="fa fa-trash-o"></i></a>
         </td>
       </tr>
       <% end %>

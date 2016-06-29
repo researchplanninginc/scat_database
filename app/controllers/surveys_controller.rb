@@ -16,6 +16,7 @@ class SurveysController < ApplicationController
   end
 
   def create
+    @people = Person.all
     @survey = Survey.new
     @survey.survey_id = params[:survey_id]
     @survey.segment_id = params[:segment_id]

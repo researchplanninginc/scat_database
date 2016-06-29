@@ -32,8 +32,7 @@
         <label for="segment_id" class="control-label">
           Segment
         </label>
-
-        <input type="text" id="segment_id" name="segment_id" placeholder="Segment" class="form-control" value="<%= @survey.segment_id %>">
+        <%= select_tag(:segment_id, options_from_collection_for_select(Segment.all, :id, :segment_id), :class => "form-control") %>
       </div>
 
       <!-- Label and input for surv_date -->
@@ -44,11 +43,6 @@
 
         <input type="text" id="surv_date" name="surv_date" placeholder="Surv date" class="form-control" value="<%= @survey.surv_date %>">
       </div>
-
-
-
-
-
 
 
       <!-- Label and input for start_time -->
@@ -73,43 +67,53 @@
       <!-- Label and input for tide_hgt -->
       <div class="form-group">
         <label for="tide_hgt" class="control-label">
-          Tide hgt
+          Tide height
         </label>
-
-        <input type="text" id="tide_hgt" name="tide_hgt" placeholder="Tide hgt" class="form-control" value="<%= @survey.tide_hgt %>">
+        <select class="form-control" id="tide_hgt" name="tide_hgt" value="<%= @survey.tide_hgt %>">
+          <option>L</option>
+          <option>M</option>
+          <option>H</option>
+        </select>
       </div>
 
       <!-- Label and input for surv_type -->
       <div class="form-group">
         <label for="surv_type" class="control-label">
-          Surv type
+          Survey type
         </label>
-
-        <input type="text" id="surv_type" name="surv_type" placeholder="Surv type" class="form-control" value="<%= @survey.surv_type %>">
+        <select class="form-control" id="surv_type" name="surv_type" placeholder="Foot" value="<%= @survey.surv_type %>">
+          <option>Foot</option>
+          <option>ATV</option>
+          <option>Airboat</option>
+          <option>Boat</option>
+          <option>Helicopter/Aircraft</option>
+          <option>Overlook</option>
+          <option>UAV</option>
+        </select>
       </div>
 
       <!-- Label and input for surv_per1 -->
       <div class="form-group">
         <div class="col-sm-4">
           <label for="surv_per1" class="control-label">
-            Personnel 1 (RP)
+            Team Member 1 (RP)
           </label>
-          <%= select_tag(:person_id, options_from_collection_for_select(Person.order("last_name, first_name ASC"), :id, :full_name, @survey.surv_per1), :class => "form-control") %>
+          <%= select_tag(:surv_per1, options_from_collection_for_select(Person.order("last_name, first_name ASC"), :id, :full_name), :class => "form-control") %>
 
         </div>
         <!-- Label and input for surv_per2 -->
         <div class="col-sm-4">
             <label for="surv_per2" class="control-label">
-              Personnel 2 (State)
+              Team Member 2 (State)
             </label>
-          <%= select_tag(:person_id, options_from_collection_for_select(Person.order("last_name, first_name ASC"), :id, :full_name, @survey.surv_per2), :class => "form-control") %>
+          <%= select_tag(:surv_per2, options_from_collection_for_select(Person.order("last_name, first_name ASC"), :id, :full_name), :class => "form-control") %>
         </div>
         <!-- Label and input for surv_per2 -->
         <div class="col-sm-4">
             <label for="surv_per3" class="control-label">
-              Personnel 3 (Federal)
+              Team Member 3 (Federal)
             </label>
-          <%= select_tag(:person_id, options_from_collection_for_select(Person.order("last_name, first_name ASC"), :id, :full_name, @survey.surv_per3), :class => "form-control") %>
+          <%= select_tag(:surv_per3, options_from_collection_for_select(Person.order("last_name, first_name ASC"), :id, :full_name), :class => "form-control") %>
         </div>
       </div>
 
@@ -117,22 +121,23 @@
       <div class="form-group">
         <div class="col-sm-4">
             <label for="surv_per4" class="control-label">
-              Personnel 4
+              Team Member 4
             </label>
-          <%= select_tag(:person_id, options_from_collection_for_select(Person.order("last_name, first_name ASC"), :id, :full_name, @survey.surv_per4), :class => "form-control") %>
+          <%= select_tag(:surv_per4, options_from_collection_for_select(Person.order("last_name, first_name ASC"), :id, :full_name), :class => "form-control") %>
         </div>
 
         <div class="col-sm-4">
             <label for="surv_per5" class="control-label">
-              Personnel 5
+              Team Member 5
             </label>
-          <%= select_tag(:person_id, options_from_collection_for_select(Person.order("last_name, first_name ASC"), :id, :full_name, @survey.surv_per5), :class => "form-control") %>
+          <%= select_tag(:surv_per5, options_from_collection_for_select(Person.order("last_name, first_name ASC"), :id, :full_name), :class => "form-control") %>
         </div>
+
         <div class="col-sm-4">
             <label for="surv_per6" class="control-label">
-              Personnel 6
+              Team Member 6
             </label>
-          <%= select_tag(:person_id, options_from_collection_for_select(Person.order("last_name, first_name ASC"), :id, :full_name, @survey.surv_per6), :class => "form-control") %>
+          <%= select_tag(:surv_per6, options_from_collection_for_select(Person.order("last_name, first_name ASC"), :id, :full_name), :class => "form-control") %>
           <p class="help-block">
             <a href="/people/new">or add new</a>
           </p>
@@ -145,7 +150,7 @@
       <!-- Label and input for surv_comm -->
       <div class="form-group">
         <label for="surv_comm" class="control-label">
-          Surv comm
+          Survey comments:
         </label>
 
         <textarea id="surv_comm" name="surv_comm" placeholder="Surv comm" class="form-control" rows="3"><%= @survey.surv_comm %></textarea>
