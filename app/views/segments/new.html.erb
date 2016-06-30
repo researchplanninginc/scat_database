@@ -23,27 +23,29 @@
         <label for="segment_id" class="control-label">
           Segment
         </label>
-
         <input type="text" id="segment_id" name="segment_id" placeholder="Segment" class="form-control" value="<%= @segment.segment_id %>">
       </div>
 
-      <!-- Label and input for esi_prim -->
       <div class="form-group">
-        <label for="esi_prim" class="control-label">
-          Esi prim
-        </label>
 
-        <input type="text" id="esi_prim" name="esi_prim" placeholder="Esi prim" class="form-control" value="<%= @segment.esi_prim %>">
-      </div>
+          <label for="esi_prim" class="control-label">
+            Primary ESI
+          </label>
+          <%= select_tag(:esi_prim, options_from_collection_for_select(LookupEsi.all, :esi_code, :description), :class => "form-control") %>
+        </div>
 
-      <!-- Label and input for esi_sec -->
       <div class="form-group">
-        <label for="esi_sec" class="control-label">
-          Esi sec
-        </label>
+          <label for="esi_sec" class="control-label">
+            Secondary ESI
+          </label>
+          <%= select_tag(:esi_sec, options_from_collection_for_select(LookupEsi.all, :esi_code, :description), :class => "form-control") %>
+        </div>
 
-        <input type="text" id="esi_sec" name="esi_sec" placeholder="Esi sec" class="form-control" value="<%= @segment.esi_sec %>">
-      </div>
+
+
+
+
+
 
       <!-- Label and input for back_cliff -->
       <div class="checkbox">
