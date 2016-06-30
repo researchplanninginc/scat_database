@@ -35,7 +35,7 @@
           <span class="icon-bar"></span>
         </button>
         <a class="navbar-brand" href="/">
-          <img alt="NOAA SCAT Database" src="/assets/NOAA_logo.svg" style="height:30px">
+          <img alt="NOAA SCAT Database" src="/assets/NOAA_logo.svg" style="height:25px">
         </a>
 
 
@@ -46,10 +46,33 @@
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
           <li><a href="/segments">Segments</a></li>
-          <li><a href="/surveys">Surveys</a></li>
-          <li><a href="/pits">Pits</a></li>
-          <li><a href="/zones">Zones</a></li>
           <li><a href="/people">People</a></li>
+          <li><a href="/surveys">Surveys</a></li>
+          <li><a href="/zones">Zones</a></li>
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Data <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="/segments">Segments</a></li>
+              <li><a href="/surveys">Surveys</a></li>
+              <li><a href="/pits">Zones</a></li>
+              <li><a href="/zones">Pits</a></li>
+              <li><a href="/people">People</a></li
+              <li role="separator" class="divider"></li>
+              <li><a href="/strs">STRs</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Admin <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="/setup">DB Setup</a></li>
+              <li><a href="/surveys">Incident/a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="/pits">Check Data</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="/zones">Import from CSV</a></li>
+              <li><a href="/people">Export from CSV</a></li>
+            </ul>
+          </li>
         </ul>
 
         <ul class="nav navbar-nav navbar-right">

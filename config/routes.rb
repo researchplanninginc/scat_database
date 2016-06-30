@@ -3,6 +3,11 @@ Rails.application.routes.draw do
   root :controller => 'pages', :action => 'dashboard'
   # static pages
   get 'pages/dashboard'
+  get 'pages/setup'
+  get 'pages/incident'
+  get 'pages/import'
+  get 'pages/export'
+  get 'pages/check'
   get 'pages/home'
   get 'pages/about'
 
